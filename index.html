@@ -1,424 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce website</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/0e53af926d.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!--header section-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoviCare - Revolutionizing Healthcare</title>
+    <!-- Add Bootstrap CSS and Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- Add ScrollMagic and AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/uncompressed/ScrollMagic.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            color: #fff; /* White font color */
+            background-image: url('https://wallpapercrafter.com/desktop1/511167-abstract-Ae-Plexus-cyan-dots-technology-connection.jpg'); /* Replace 'your-background-image-url.jpg' with your image URL */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    
+        
+        header {
+        background-color: rgba(76, 175, 80, 0); /* Transparent background */
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+        h1 {
+            font-size: 2.5em;
+        }
+    
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    
+        section {
+            padding: 60px 0;
+        }
+    
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+    
+        #popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        footer {
+        background-color: rgba(51, 51, 51, 0); /* Transparent background */
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+        /* Rest of the existing styling */
+    
+        /* Custom Styling */
+        .feature-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.3s ease-in-out;
+            background-color: #222;
+        }
+    
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+    
+        .module-card {
+        background: linear-gradient(135deg, #222, #444); /* Gradient background */
+        padding: 20px;
+        border-radius: 20px; /* Adjusted border radius */
+        text-align: center;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjusted box-shadow */
+        overflow: hidden; /* Hide overflowing content */
+        position: relative; /* Position relative for pseudo elements */
+    }
+
+    .module-card::before,
+    .module-card::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.05); /* Gradient overlay */
+        transition: transform 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    .module-card::before {
+        left: 0;
+        top: 0;
+        transform: skewX(-30deg) translateX(-150%);
+    }
+
+    .module-card::after {
+        right: 0;
+        top: 0;
+        transform: skewX(30deg) translateX(150%);
+    }
+
+    .module-card:hover::before,
+    .module-card:hover::after {
+        transform: skewX(-30deg) translateX(150%);
+    }
+
+    .module-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Enhanced box-shadow on hover */
+    }
+    
+
+    </style>
+    
+</head>
+<body>
 
     <header>
-      <div id="header">
-        <div class="header-logo">
-          <a href="indext.html"><img src="images/logo.png" alt="" /></a>
+        <div class="container">
+            <h1><B>INNOVI CARE</B></h1>
+            <p>Empowering Care through AI: Innovating Compassionate Solutions</p>
         </div>
-        <div class="header-list">
-          <nav class="header-list-nav">
-            <ul>
-              <li><a class="active" href="index.html">Home</a></li>
-              <li><a href="shop.html">Shop</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>
-          <div class="header-list-icon">
-            <a href=""><i class="fa fa-bag-shopping"></i></a>
-          </div>
-        </div>
-      </div>
     </header>
 
-    <!--main section-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introduction">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#module1">Module 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#module2">Module 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#module3">Module 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#module4">Module 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#module5">Module 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary" onclick="showPopup()">Learn More</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-      <section id="hero">
-        <h4>Trade-in-offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
-        <p>save more coupons & up to 70% off!</p>
-        <button>Shop now</button>
-      </section>
+    <section id="introduction">
+        <div class="container">
+            <h1>Welcome to InnoviCare</h1>
+    
+            <p>
+                InnoviCare emerges at the forefront of a transcendent era in healthcare, embodying a harmonious blend of visionary technology and empathetic care. With a relentless commitment to innovation, we propel the boundaries of possibility, pioneering an unparalleled ecosystem poised to revolutionize healthcare dynamics worldwide.
+            </p>
 
-      <section id="features" class="section-p1">
-        <div class="f-box">
-          <img src="images/features/f1.png" alt="free shipping" />
-          <h6>Free shipping</h6>
-        </div>
-        <div class="f-box">
-          <img src="images/features/f2.png" alt="online order" />
-          <h6>online order</h6>
-        </div>
-        <div class="f-box">
-          <img src="images/features/f3.png" alt="save money" />
-          <h6>save money</h6>
-        </div>
-        <div class="f-box">
-          <img src="images/features/f4.png" alt="promotions" />
-          <h6>promotions</h6>
-        </div>
-        <div class="f-box">
-          <img src="images/features/f5.png" alt="happy sell" />
-          <h6>happy sell</h6>
-        </div>
-        <div class="f-box">
-          <img src="images/features/f6.png" alt="24/7 support" />
-          <h6>24/7 support</h6>
-        </div>
-      </section>
+            <p>
+                At the heart of our groundbreaking initiative lies a symbiosis between cutting-edge artificial intelligence, cognitive computing, and predictive analytics. Infused with neural networks mirroring the complexity of the human brain, our platform transcends conventional data interpretation, instinctively comprehending intricate patient nuances, and empowering healthcare practitioners with unprecedented insights.
+            </p>
 
-      <section class="product-section" class="section-p1">
-        <h1>Featured Products</h1>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-collection">
-          <div class="product-cart">
-            <img src="images/products/f1.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/f2.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/f3.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/f4.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/f5.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/f6.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/f7.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/f8.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-        </div>
-      </section>
+            <img src="https://imageio.forbes.com/blogs-images/bernardmarr/files/2018/07/AdobeStock_157266517-1200x640.jpeg?format=jpg&height=900&width=1600&fit=bounds" alt="Image 1">
+            
+            <p>
+                InnoviCare embodies a visionary interface that prioritizes the holistic well-being of each patient. Seamlessly integrated into healthcare workflows, our system orchestrates an intuitive symphony of efficiency and empathy, liberating healthcare professionals from routine tasks and empowering them to channel their expertise into personalized, human-centric care models.
+            </p>
 
-      <section id="off-banner" class="section-m1">
-        <h4>Repaire Services</h4>
-        <h2>Up to 70% Off - All t-Shirts & Accessories</h2>
-        <button class="normal">Explore More</button>
-      </section>
+            <img src="https://e0.pxfuel.com/wallpapers/799/613/desktop-wallpaper-should-we-be-scared-by-superintelligent-ai-pioneering-minds-technology-science-illustration-design-ai-artificial-intelligence.jpg" alt="Image 2">
+            
+            <p>
+                Our pioneering strides extend beyond conventional AI approaches. InnoviCare leverages quantum-inspired algorithms and harnesses decentralized blockchain architecture, fortifying data security and integrity. Within our arsenal resides QuantumFlow and HyperNet, next-gen machine learning frameworks, delivering unparalleled computational prowess and predictive accuracy.
+            </p>
 
-      <section class="product-section" class="section-p1">
-        <h1>New Arrivals</h1>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-collection">
-          <div class="product-cart">
-            <img src="images/products/n1.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/n2.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/n3.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/n4.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/n5.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/n6.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/n7.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-          <div class="product-cart">
-            <img src="images/products/n8.jpg" alt="product image" />
-            <span>adidas</span>
-            <h4>Cartoon Astronaut T-Shirts</h4>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4 class="price">$78</h4>
-            <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
-          </div>
-        </div>
-      </section>
+            <p>
+                Beyond a mere platform, InnoviCare is a harbinger of seismic healthcare revolution. It transcends boundaries, adapts dynamically, and envisions a future where healthcare becomes a seamless tapestry of innovation and compassion. Join us in scripting a new chapter in the annals of healthcare evolution with InnoviCare.
+            </p>
 
-      <section id="banners" class="section-p1">
-        <div class="big-banners">
-          <div class="big-banners-1">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <span>The best classic dress is on sale at coro</span>
-            <button class="banner-btn">Learn More</button>
-          </div>
-          <div class="big-banners-2">
-            <h4>spring/summer</h4>
-            <h2>upcomming season</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="banner-btn">Collection</button>
-          </div>
-        </div>
-        <div class="small-banners">
-          <div class="small-banners-1">
-            <h2>SEASONAL SALE</h2>
-            <h5>Winter Collection 50% Off</h5>
-          </div>
-          <div class="small-banners-2">
-            <h2>NEW FOOTWEAR COLLECTION</h2>
-            <h5>Spring/Summer 2022</h5>
-          </div>
-          <div class="small-banners-3">
-            <h2>T-SHIRTS</h2>
-            <h5>New Trendy Prints</h4>
-          </div>
-        </div>
-      </section>
+            <p>
+                Rooted in a philosophy of continuous advancement, InnoviCare stands as a testament to relentless innovation. We are pioneering the fusion of advanced technologies and compassionate care, forging a path that redefines healthcare norms, not just nationally, but on a global scale.
+            </p>
 
-      <section id="newsletter">
-        <div class="newsletter-text">
-          <h3>Sign Up For Newsletters</h3>
-          <h5>get e-mail updates about out latest shop and <span>special offers</span></h5>
-        </div>
-        <div class="form">
-          <input type="email" placeholder="Your email address" id="email-address-input">
-          <button>Sign Up</button>
-        </div>
-      </section>
+            <p>
+                We place unwavering emphasis on not only treating illnesses but proactively maintaining well-being. InnoviCare employs predictive analytics and prescriptive models, empowering practitioners to predict potential health risks and prescribe personalized preventive measures, thereby reshaping the paradigm of healthcare from reactive to proactive.
+            </p>
 
-    </main>
+            <p>
+                Our commitment to ethical AI practices underscores every facet of InnoviCare. We operate with an unwavering dedication to data privacy, transparency, and the responsible deployment of technology, ensuring that each patient interaction upholds the highest standards of integrity and trust.
+            </p>
 
-    <!--footer section-->
+            <p>
+                Collaborative innovation is at the core of our ethos. We foster interdisciplinary collaborations, inviting the brightest minds across diverse domains to join forces in shaping a future where technology amplifies human potential, fostering an era of inclusivity and accessibility in healthcare solutions.
+            </p>
+
+            <p>
+                InnoviCare is more than a venture; it's a movement. It's a movement that dares to envision a future where healthcare transcends the limitations of today, embracing a horizon where compassion and cutting-edge technology converge to ensure that every individual receives the highest quality care, irrespective of barriers.
+            </p>
+
+            <p>
+                Together, let's forge a future where healthcare becomes a testament to human innovation, compassion, and equity. Embrace the transformative power of InnoviCare as we embark on a journey that shapes the destiny of healthcare for generations to come.
+            </p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 data-aos="fade-up">Key Features</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-right">
+                    <div class="feature-card">
+                        <i class="fas fa-cogs fa-3x mb-3"></i>
+                        <h3>Advanced Technology</h3>
+                        <p>Utilize cutting-edge technology to provide efficient and personalized care to patients.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <i class="fas fa-heartbeat fa-3x mb-3"></i>
+                        <h3>Compassionate Care</h3>
+                        <p>Combine advanced technology with a compassionate approach for improved patient outcomes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <div class="feature-card">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h3>Empower Professionals</h3>
+                        <p>Empower healthcare professionals with intelligent tools for better decision-making.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="module1" class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="module-card" data-aos="fade-up">
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <img src="https://techemergent.com/wp-content/uploads/2023/01/Pros-and-cons-of-artificial-intelligence-in-healthcare.jpg" alt="DISEASE DIAGNOSIS">
+
+                        <h3><B>AutoDiagnose</B></h3>
+                        <p>Automated Disease Diagnosis assists healthcare professionals in accurately diagnosing medical conditions utilizing advanced algorithms.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="module2" class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <!-- Add Image or Additional Content Here -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="module-card" data-aos="fade-up">
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <img src="https://as1.ftcdn.net/v2/jpg/02/25/00/34/500_F_225003422_3qIXn6dFasl32tGkDQ2H7RTX63wwnuyg.jpg" alt="DISEASE DIAGNOSIS">
+
+                        <h3><B>PersonalRx</B></h3>
+                        <p>Personalized Treatment Recommender provides tailored treatment plans for patients based on their individual health data and history.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Repeat the following section structure for each module -->
+    <section id="module3" class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="module-card" data-aos="fade-up">
+                        <!-- Replace icon class, heading, and description accordingly -->
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <img src="https://img.freepik.com/premium-vector/ai-chatbot-artificial-intelligence-robot-chat-dialog-box-technology-background_4974-311.jpg" alt="DISEASE DIAGNOSIS">
+
+                        <h3><B>HealthMate</B></h3>
+                        <p>Health Bot offers interactive assistance and guidance to users regarding their health concerns and queries.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Add Image or Additional Content Here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="module4" class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <!-- Add Image or Additional Content Here -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="module-card" data-aos="fade-up">
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <img src="https://www.engineering.com/portals/0/BlogFiles/bigstock-Abstract-Technology-Ui-Futuris-228406639.jpg" alt="DISEASE DIAGNOSIS">
+
+                        <h3><B>SymptomCheck </B></h3>
+                        <p>Symptom Checker and Disease Prediction utilizes symptom analysis to predict possible diseases, aiding users in early identification and prevention.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="module5" class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="module-card" data-aos="fade-up">
+                        <!-- Replace icon class, heading, and description accordingly -->
+
+                        
+
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <img src="https://ts2.space/wp-content/uploads/2023/04/mfrack_Medical_Healthcare_with_AI_7cbf6782-82fd-4b9f-aac5-9e267eee8885.jpeg
+                        " alt="DISEASE DIAGNOSIS">
+                        <h3><B>NearHospitals</B></h3>
+                        <p>Nearest Hospitals Finder helps users locate healthcare facilities based on their specific medical condition or disease.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Add Image or Additional Content Here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="module6" class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="module-card" data-aos="fade-up">
+                        <!-- Replace icon class, heading, and description accordingly -->
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <img src="https://wallpapercrafter.com/desktop1/507193-geometry-poly-vector-dots-abstract-digital-art.jpg
+                        " alt="DISEASE DIAGNOSIS">
+                        <h3><B>AppointEase</B></h3>
+                        <p>Appointment Scheduling allows users to efficiently book appointments with healthcare providers based on availability and preferences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Add Image or Additional Content Here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="module7" class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <!-- Add Image or Additional Content Here -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="module-card" data-aos="fade-up">
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <img src="https://media.licdn.com/dms/image/C5612AQEOrxdeuwXbzg/article-cover_image-shrink_600_2000/0/1627391760350?e=2147483647&v=beta&t=570RfsT32JAf69EaOpKLoBBtoJ9lEkc4q4BIv26F5Fo
+                        " alt="DISEASE DIAGNOSIS">
+                        <h3><B>DrugGuard</B></h3>
+                        <p>Drug Interaction Predictor analyzes potential interactions between medications, providing insights to avoid adverse reactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Include sections for other modules (4 to 7) using similar structures -->
+    
+
+    <div id="popup">
+        <div id="popup-content" class="container">
+            <h2>More About CareAI</h2>
+            <p>Explore the features and benefits of CareAI's intelligent medical assistant. Join us in shaping the future of healthcare!</p>
+            <button class="btn btn-secondary" onclick="hidePopup()">Close</button>
+        </div>
+    </div>
+
 
     <footer>
-      <div id="footer">
-        <div class="contact">
-          <a href="indext.html"><img src="images/logo.png" alt="" /></a>
-          <br> <br>
-          <br> 
-          <h3>Contact</h3>
-          <address>
-            <p><b>Address:</b> Wellington Road, Street 32. San Francisco</p>
-            <p><b>Phone:</b> Wellington Road, Street 32. San Francisco</p>
-            <p><b>Hours</b> 10:00 - 18:00. Mon - Sat</p>
-          </address>
-          <h3>Follow Us</h3>
-          <br> 
-          <div class="socials">
-            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
+        <div class="container">
+            <p>&copy; 2023 CareAI. All rights reserved.</p>
         </div>
-        <div class="about">
-          <h3>About</h3>
-          <br> 
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Contact Us</a>
-        </div>
-        <div class="myaccount ">
-          <h3>My account</h3>
-          <br> 
-          <a href="#">Sign In</a>
-          <a href="#">View Cart</a>
-          <a href="#">My Wishlist</a>
-          <a href="#">Track My Order</a>
-          <a href="#">Help</a>
-        </div>
-        <div class="install">
-          <h3>Install App</h3>
-          <br> 
-          <p>From App Store or Google Play</p>
-          <div class="download">
-            <a href="#"><img src="images/pay/app.jpg" alt=""></a>
-            <a href="#"><img src="images/pay/play.jpg" alt=""></a>
-          </div>
-          <p>Secured Payment Gateways</p>
-          <img src="images/pay/pay.png" alt="">
-        </div>
-        
-      </div>
     </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Add ScrollMagic and AOS JS -->
+    <script src="https://unpkg.com/scrollmagic@2.0.8/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize ScrollMagic
+        var controller = new ScrollMagic.Controller();
+
+        // Add ScrollMagic scene for features section
+        new ScrollMagic.Scene({
+            triggerElement: '#features',
+            triggerHook: 0.7,
+            reverse: false
+        })
+        .setClassToggle('#features .feature-card', 'aos-animate')
+        .addTo(controller);
+
+        // Add ScrollMagic scenes for modules
+        var moduleScenes = document.querySelectorAll('.module');
+        moduleScenes.forEach(function (scene, index) {
+            new ScrollMagic.Scene({
+                triggerElement: scene,
+                triggerHook: 0.7,
+                reverse: false
+            })
+            .setClassToggle(scene, 'aos-animate')
+            .addTo(controller);
+        });
+    </script>
+</body>
 </html>
